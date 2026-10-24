@@ -1,3 +1,4 @@
+
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -7,11 +8,12 @@ import Blog from "./pages/Blog";
 import Post1 from "./pages/Post1";
 import Post2 from "./pages/Post2";
 import Post3 from "./pages/Post3";
+
 import "./index.css";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path="/" element={<Home />} />
 
